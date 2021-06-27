@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+<!-- for Bootstap-->     
+<link rel="stylesheet" href= "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>   
+    
+<!-- For moving image-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    
+  
+<style>
+    
+.header{ 
+     background-color: #fff;
+     color:black;
+     height:47px;
+     font-size: 21px;
+     margin: 0px;
+          
+          }
+
+.button {
+     background-color: #b0173d;
+     border: none;
+     color: white;
+     padding: 1px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-flex;
+     font-size: 20px;
+     margin: 7px 20px;
+     cursor: pointer;
+     border-radius: 12px;
+    
+          }
+    
+.navbar-custom {
+     background-color: #3b3b3b;
+     height: 100px;
+          }
+    
+.nav-link{
+     color: white;
+   
+          }
+
+.topnav-right {
+    float: right;
+          } 
+    
+.line {
+     background-color: rgb(234, 46, 71);
+     top: 50px;
+     width: 100%;
+     height: 2.3px;
+          }
+    
+.container {
+    height: 200px;
+    position: relative;
+    text-align: center;
+    color: white;
+          } 
+
+.bottom-left {
+    position: absolute;
+    bottom: 15px;
+    left: 30px;
+          }
+    
+.columns {
+    margin-top: 0rem !important;
+    margin-bottom: 0px;
+        }
+
+.column.hero {
+    background-image: -moz-linear-gradient( -144deg, rgba(255, 115, 106, 0) 0%, rgb(97, 42, 49) 100%), url(../img/hero.png);
+    background-image: -webkit-linear-gradient( -144deg, rgba(255, 115, 106, 0) 0%, rgb(97, 42, 49) 100%), url(../img/hero.png);
+    background-image: -ms-linear-gradient( -144deg, rgba(255, 115, 106, 0) 0%, rgb(97, 42, 49) 100%), url(../img/hero.png);
+    background-color: #626262;
+    margin-left: 30px;
+        }
+
+.c-title {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 60px;
+    text-shadow: 0px 1px 0px rgba(56, 56, 56, 0.46);
+    margin-left: px;
+       }
+
+.c-paragraph {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 38px;
+    color: white;
+}
+
+.btn-set {
+    margin-top: 50px;
+    margin-right: 50px;
+    margin-bottom: 5px;
+    height: 50px;
+}
+
+.c-btn {
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #fff;
+    background-color: rgba(101, 101, 101, 0);
+    width: 157px;
+    padding: 17px 40px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+}
+.hero .set {
+    padding: 3% 10%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+}
+
+.footer-dark {
+  padding:50px 0;
+  color:#f0f9ff;
+  background-color:#282d32;
+}
+
+.footer-dark h3 {
+  margin-top:0;
+  margin-bottom:12px;
+  font-weight:bold;
+  font-size:16px;
+}
+
+.footer-dark ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:14px;
+  margin-bottom:0;
+}
+
+.footer-dark ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.6;
+}
+
+.footer-dark ul a:hover {
+  opacity:0.8;
+}
+    
+.footer-dark .item.text {
+  margin-bottom:36px;
+}    
+
+.footer-dark .item.text p {
+  opacity:0.6;
+  margin-bottom:0;
+}
+
+.footer-dark .item.social {
+  text-align:center;
+}
+    
+.footer-dark .item.social > a {
+  font-size:20px;
+  width:36px;
+  height:36px;
+  line-height:36px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  box-shadow:0 0 0 1px rgba(255,255,255,0.4);
+  margin:0 8px;
+  color:#fff;
+  opacity:0.75;
+}
+
+.footer-dark .item.social > a:hover {
+  opacity:0.9;
+}
+
+.footer-dark .copyright {
+  text-align:center;
+  padding-top:24px;
+  opacity:0.3;
+  font-size:13px;
+  margin-bottom:0;
+}  
+    
+@media (max-width:991px) {
+.footer-dark .item.social {
+    text-align:center;
+    margin-top:20px;
+  }
+}
+
+@media (max-width:767px) {
+.footer-dark .item.text {
+    margin-bottom:0;
+  }
+}    
+@media (max-width:767px) {
+.footer-dark .item:not(.social) {
+    text-align:center;
+    padding-bottom:20px;
+  }
+}
+
+
+    
+    
+    
+.columnsab{
+    background: #f2f2f0;
+    position: relative;
+    text-align: right;
+    color: white ;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    }
+    
+.top-left {
+    position: absolute;
+    bottom: 78px;
+    left: 10px;
+    top: px;
+    }   
+    
+.c-titleab{ 
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 60px;
+    text-shadow: 0px 1px 0px rgba(56, 56, 56, 0.46);
+    text-align: center; 
+    color: #b0173d;
+    }
+
+.c-paragraphab{
+   margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 38px;
+    color: black; 
+    text-align: left;  
+    }  
+    
+.c-paragraphabc{
+    margin-top: 0px;
+    margin-bottom: -30px;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 38px;
+    color: black; 
+    text-align: center;    
+    }   
+    
+.buttonab {
+     background-color: #b0173d;
+     margin-bottom: -100px;
+     border: none;
+     border-style: solid;
+     color: white;
+     padding: 1px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: o;
+     font-size: 20px;
+     margin: 7px 20px;
+     cursor: pointer;
+     border-radius: 3px;
+          } 
+
+    
+    
+    
+    
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}        
+    
+    
+
+    
+    
+    
+    
+    
+ /* Add a gray background color and some padding to the footer */
+ 
+.carousel-inner img {
+      width: 100%; /* Set width to 100% */
+      min-height: 200px;
+    }
+
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    @media (max-width: 600px) {
+.carousel-caption {
+        display: none; 
+      }
+    }   
+    
+    
+.containerpartner{
+        color: black;
+    }
+    
+    
+    
+.containerpartnerinfo{
+    text-align: center;
+  margin-left: 0px;
+    margin-bottom: 100px;
+           color: black;
+     margin-top: 10px;
+    
+    
+}
+    .row{
+       justify-content: center;
+    }
+
+    .containerinfo{background-color: lightgray;
+        margin-left:1px;
+        height:350px;
+       
+    }  
+        
+    
+    
+</style>
+  
+</head>
+
+<!-- header start -->
+
+<header>
+    <div>
+        <center>
+                HELP US SHOW LOVE, SUBMIT YOUR DONATION 
+            <a href="#" class="button">DONATE</a> 
+        </center>
+    </div>  
+</header>
+    
+<!-- header end -->    
+
+<!-- line start -->
+    
+      <div class="line"></div>
+    
+<!-- line end -->    
+    
+<body>
+
+<!-- nav-bar start-->    
+
+<nav class=" navbar navbar-expand-lg navbar-custom ">
+  <div class="container-fluid">
+      
+    <a class="navbar-brand" href="#"><img src="logo-charity.png"></a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        
+          <span class="navbar-toggler-icon"></span>
+          
+      </button>
+      
+        <div class="topnav-right">
+            
+           <div class="collapse navbar-collapse" id="navbarNav">
+               
+               <ul class="navbar-nav">
+                   
+                  <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                  </li>
+                   
+                  <li class="nav-item">
+                     <a class="nav-link" href="">ABOUT US</a>
+                  </li>
+                   
+                  <li class="nav-item">
+                     <a class="nav-link" href="registration_page.html">START A FUNDRAISER</a>
+                  </li>
+                   
+                   <li class="nav-item">
+                     <a class="nav-link" href="contact.html">CONTACTS</a>
+                  </li>
+                   
+                  <li class="nav-item">
+                     <a class="nav-link " href="donate_page.html" tabindex="-1" aria-disabled="true">DONATE</a>
+                  </li>   
+                     <li class="nav-item">
+                     <a class="nav-link" href="#">LOGIN</a>
+                  </li>
+              </ul>
+               
+          </div> 
+            
+      </div>
+      
+  </div>
+    
+</nav>
+     
+<!-- nav-bar end -->    
+    
+<!-- hero image in container and text start -->    
+    
+<div class="columns">                                                                   
+
+        <img src="hero.png" alt="Snow" style="width:100%;">
+    
+<div class="bottom-left">                                       
+
+  <div class="column hero">                                    
+    
+      <div class="set">   
+          
+                 <h1 class="c-title">
+                     <b>Worried about<br> a child?</b>
+                 </h1>
+
+                 <p class="c-paragraph">
+                     <b> Don't want to be certain if you think<br> a child might be at risk?<br> Together we can make a difference<br> and change the situation.</b>
+                 </p>
+
+                 <div class="btn-set">                                
+                     <a href="#" class="c-btn">TAKE ACTION</a> 
+                 </div>                                             
+
+      </div>                                                                                                                                                           
+  
+  </div>                                                      
+    
+</div>                                                        
+    
+</div>                                                        
+       
+<!-- hero image in container and text end -->    
+
+<!-- line start -->
+    
+      <div class="line"></div>
+    
+<!-- line end -->     
+    
+    
+<!-- About us in container and text start--> 
+<div>
+   <div class=columnsab>
+       <img src="pic-about.jpg" alt="Snow" style="width:40%; height: 200%">
+         <div class="top-left"> 
+             <p class="c-paragraphab">
+                <b>WHY WE STARTED OUR STORY -OUR STORY</b>
+             </p>     
+                 <h1 class="c-titleab">
+                     <b>About us</b>
+                 </h1>
+
+                 <p class="c-paragraphabc">
+                     <b> Don't want to be certain if you think<br> a child might be at risk?<br> Together we can make a difference<br> and change the situation.</b>
+                 </p>
+                 <br>
+                 <br>
+                 <a href="#" class="buttonab">READ MORE</a> 
+                 
+         </div>              
+   </div>
+</div>        
+    
+<!-- About us in container and text end-->    
+
+    
+    
+<!-- moving image start-->    
+<h3 style="text-align: center"><b>Our Missions</b></h3>
+
+<div class="slideshow-container" style="max-width:2000%">
+     
+      <div class="mySlides fade">                          
+           <div class="numbertext"></div>                   <!--text can be written between-->
+           <img src="move1.jpg" style="width:100%">
+           <div class="text"></div>                         <!--text can be written between-->
+     </div>
+
+      <div class="mySlides fade">             
+           <div class="numbertext"></div>                   <!--text can be written between-->
+           <img src="move2.jpg" style="width:100%">
+           <div class="text"></div>                         <!--text can be written between-->
+     </div>
+
+      <div class="mySlides fade">
+           <div class="numbertext"></div>                   <!--text can be written between-->
+           <img src="move4.jpg" style="width:100%">
+           <div class="text"></div>                         <!--text can be written between-->
+     </div>
+
+</div>
+    
+<br>
+
+<div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+</div>
+
+<script>
+    
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+    
+</script>
+ 
+       
+<!-- moving image end-->  
+
+
+<!--partner-->
+    
+<div class="containerpartner text-center">    
+  <h3><b>Our Partners</b></h3>
+  <br>
+   <div class="row">
+      <div class="col-sm-2">
+      <img src="partner1.png" class="img-responsive" style="width:50%" alt="Image">
+      <p></p>
+    </div>
+      <div class="col-sm-2"> 
+      <img src="partner2.png" class="img-responsive" style="width:50%" alt="Image">
+      <p></p>    
+    </div>
+      <div class="col-sm-2"> 
+      <img src="partner3.png" class="img-responsive" style="width:50%" alt="Image">
+      <p></p>
+    </div>
+      <div class="col-sm-2"> 
+      <img src="partner4.png" class="img-responsive" style="width:50%" alt="Image">
+      <p></p>
+    </div> 
+      <div class="col-sm-2"> 
+      <img src="partner5.png" class="img-responsive" style="width:50%" alt="Image">
+      <p></p>
+    </div>     
+      <div class="col-sm-2"> 
+      <img src="partner6.png" class="img-responsive" style="width:50%" alt="Image">
+      <p></p>
+    </div> 
+   </div>
+</div><br>
+    
+    
+    
+<!--partner end-->
+  
+ <!--info-->   
+
+<div class="containerinfo">   
+<div class="containerpartnerinfo">    
+     <h3><b>India's largest and most trusted giving platform</b></h3>
+  <br>
+   <div class="row" style="background-color: lightgrey">
+    
+      <div class="col-sm-2">
+      <img src="info1.png"  style="width:20%" alt="Image"  >
+      <p>Opt to give monthly for our missions or NGO programs and make an impact</p>
+    </div>
+      <div class="col-sm-2"> 
+      <img src="info2.png"  style="width:20%" alt="Image">
+      <p>Support crowdfunding campaigns with one-time donations</p>    
+    </div>
+      <div class="col-sm-2"> 
+      <img src="info3.png"  style="width:20%" alt="Image">
+      <p>CSR and employee giving through trusted NGOs</p>
+       </div>
+      <div class="row">    
+    </div>
+      <div class="col-sm-2"> 
+      <img src="info4.png" style="width:20%" alt="Image">
+      <p>Pick from causes like education, children, livelihoods, etc</p>
+    </div> 
+      <div class="col-sm-2"> 
+      <img src="info5.png"  style="width:20%" alt="Image">
+      <p>Partnered with 2,000+ NGOs across the country</p>
+    </div>     
+      <div class="col-sm-2"> 
+      <img src="info6.png"  style="width:20%" alt="Image">
+      <p>Donations in all currencies with tax benefit for India, US and UK</p>
+    </div> 
+   </div>
+</div><br>
+    
+        
+</div>       
+<!--info end-->    
+    
+<!-- line start -->
+    
+      <div class="line"></div>
+    
+<!-- line end -->     
+
+    
+</body> 
+ 
+    
+ 
+<!--footer start-->
+ 
+      <div class="footer-dark">
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Get to know us</h3>
+                        <ul>
+                            
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Carrers</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Connect with us</h3>
+                        <ul>
+                            <li><a href="file:///C:/Users/hp/Desktop/harnessing%20website/contact.html">Contact us</a></li>
+                            <li><a href="#">Help center</a></li>
+                            
+                        </ul>
+                    </div>
+                   <div class="col-sm-6 col-md-3 item">
+                        <h3>Charity Life quote</h3>
+                        <ul>
+                            <li>You have not lived today until you have done something for someone who can never repay you</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="col item social"><a href="https://www.facebook.com/"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/"><i class="icon ion-social-twitter"></i></a><a href="http://www.snapchat.com/"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com/"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Charity Life Donations through this platform are tax exempted under 80G and 501(c)(3)</p>
+
+                
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3></h3>
+                        <ul>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3></h3>
+                        <ul>
+                            <li><a href="file:///C:/Users/hp/Desktop/harnessing%20website/term.html">Terms</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3></h3>
+                        <ul>
+                            <li><a href="file:///C:/Users/hp/Desktop/harnessing%20website/privacy.html">Privacy policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                      
+            </div>
+        </footer>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>    
+    
+<!-- footer end -->  
+    
+</html>
