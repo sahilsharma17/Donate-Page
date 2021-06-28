@@ -1,0 +1,1 @@
+document.getElementById("sButton").onclick(alert("hello"));

@@ -376,55 +376,56 @@ img {vertical-align: middle;}
 </head>
     <link rel="stylesheet" href="registration_page.css">
     <body>
-<!-- nav-bar start-->    
-
-<nav class=" navbar navbar-expand-lg navbar-custom ">
-    <div class="container-fluid">
-        
-      <a class="navbar-brand" href="#"><img src="logo_charity.png"></a>
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          
-            <span class="navbar-toggler-icon"></span>
+        <nav class=" navbar navbar-expand-lg navbar-custom ">
+        <div class="container-fluid">
             
-        </button>
-        
-          <div class="topnav-right">
+          <a class="navbar-brand" href="#"><img src="logo-charity.png"></a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               
-             <div class="collapse navbar-collapse" id="navbarNav">
-                 
-                 <ul class="navbar-nav">
+                <span class="navbar-toggler-icon"></span>
+                
+            </button>
+            
+              <div class="topnav-right">
+                  
+                 <div class="collapse navbar-collapse" id="navbarNav">
                      
-                    <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                    </li>
+                     <ul class="navbar-nav">
+                         
+                        <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                        </li>
+                         
+                        <li class="nav-item">
+                           <a class="nav-link" href="">ABOUT US</a>
+                        </li>
+                         
+                        <li class="nav-item">
+                           <a class="nav-link" href="registration_page.html">START A FUNDRAISER</a>
+                        </li>
+                         
+                         <li class="nav-item">
+                           <a class="nav-link" href="contact.html">CONTACT US</a>
+                        </li>
+                         
+                        <li class="nav-item">
+                           <a class="nav-link " href="donate_page.html" tabindex="-1" aria-disabled="true">DONATE</a>
+                        </li>   
+                           <li class="nav-item">
+                           <a class="nav-link" href="#">LOGIN</a>
+                        </li>
+                    </ul>
                      
-                    <li class="nav-item">
-                       <a class="nav-link" href="#">ABOUT US</a>
-                    </li>
-                     
-                    <li class="nav-item">
-                       <a class="nav-link" href="#">REWARDS</a>
-                    </li>
-                     
-                     <li class="nav-item">
-                       <a class="nav-link" href="#">CONTACTS</a>
-                    </li>
-                     
-                    <li class="nav-item">
-                       <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">DONATE</a>
-                    </li>           
-                </ul>
-                 
-            </div> 
-              
+                </div> 
+                  
+            </div>
+            
         </div>
-        
-    </div>
-      
-  </nav>
-       
-  <!-- nav-bar end -->    
+          
+      </nav>
+           
+      <!-- nav-bar end -->    
 <div class="containertable">
         <table class="table" id="form">
             <tr>
@@ -432,23 +433,23 @@ img {vertical-align: middle;}
                     Name:
                 </td>
                 <td >
-                    <input type="text" placeholder="Name">
+                    <input type="text" id="name" placeholder="Name">
                 
                 </td>
             </tr>
 
             <tr>
-                <td align="right">
+                <td align="right" id="dob">
                     Date of Birth:
                 </td>
                 <td>
-                    <input type="date">
+                    <input type="date" id="date">
                 </td>
             </tr> 
 
             <tr>
                 <td align="right">Why do you want to start a fundraiser:</td>
-                <td><select name="reason">
+                <td><select name="reason" id="type">
                     <option value="Medical Treatment">Medical</option>
                     <option value="Creative Idea">Creative Idea</option>
                     <option value="Charity/NGO">Charity/NGO</option>
@@ -458,20 +459,36 @@ img {vertical-align: middle;}
 
             <tr>
                 <td align="right">Reason for fundraising:</td>
-                <td><input type="text" placeholder="Please enter a desprictive reason"></td>
+                <td><input type="text" id="reason" placeholder="Please enter a desprictive reason"></td>
             </tr>
             
             <tr>
                 <td align="right">Email:</td>
-                <td><input type="email" placeholder="Enter your email here"></td>
+                <td><input id="email" type="email" placeholder="Enter your email here"></td>
             </tr>
 
             <tr>
                 <td align="right">Phone Number:</td>
                 <td><input type="number" placeholder="Enter your Phone no. here."
             </tr>
+
             <tr>
-                <td rowspan="2" align="center" ><button name="save_button" >Save</button></td>
+                <td align="right">Target(in ₹)</td>
+                <td><input type="number" id="target" placeholder="Enter amount you want to raise"></td>
+            </tr>
+            
+            <tr>
+                <td align="right">
+                    End Date:
+                </td>
+                <td>
+                    <input type="date" id="endDate">
+                </td>
+            </tr> 
+            
+            <tr>
+                <td align="right" ><button id="sButton" >Save</button></td>
+                <td> </td>
             </tr>
         </table>
         </div>
@@ -548,9 +565,14 @@ img {vertical-align: middle;}
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>    
-    
+    <script src="registration_page.js"></script>
     <!-- footer end -->  
-    </body>
+    <script>
+        
+            
+       
+    </script>
+</body>
 
 
 </html>
